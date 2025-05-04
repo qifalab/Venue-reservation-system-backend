@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: venue-reservation-backend
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://yourdb/yuyue-dev
+    username: yuyue-dev
+    password: yourpassword
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
+  packages-to-scan: com.qifalab.venuereservationbackend.controller
+
+mvc:
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "*"
+    allowed-headers: "*"
+    allow-credentials: true
+    max-age: 3600
